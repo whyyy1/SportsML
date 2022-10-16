@@ -48,4 +48,4 @@ for j in dataTables:
                 
             
 df = pd.DataFrame(league)
-print(df)
+print(df['yds_per_play_offense'])
