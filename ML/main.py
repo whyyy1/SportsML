@@ -9,10 +9,7 @@ year = 2022
 readSite = requests.get(site +'/years/' + str(year))
 soup = BeautifulSoup(readSite.content, 'html.parser')
 dataTables = soup.find_all('table')
-# count = 0
-# print(len(dataTables))
-# teamOffense = dataTables[0]
-# print(teamOffense
+
 league = []
 for j in dataTables:
     
@@ -48,4 +45,5 @@ for j in dataTables:
                 
             
 df = pd.DataFrame(league)
-print(df['yds_per_play_offense'])
+print(df.iloc[0])
+
